@@ -25,4 +25,5 @@ Meta Gamplay: Между сессиями сохранются очки техн
 
 Скриншот очень ранней версии:
 
-<img width="451" height="253" alt="image" src="https://github.com/user-attachments/assets/1f5f8b52-44cd-48c6-9d49-998fe7a78f37" />
+<img width="448" height="254" alt="image" src="https://github.com/user-attachments/assets/fa1ec174-ba22-4eec-8e1e-54c203fe6484" />
+
