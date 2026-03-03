@@ -29,6 +29,3 @@ public class TurretAuthoring : MonoBehaviour
     }
 }
 
-// Новый вспомогательный компонент
-public struct BulletPrefabReference : IComponentData { public Entity Value; }
-public struct BulletDamage : IComponentData { public float Value; }

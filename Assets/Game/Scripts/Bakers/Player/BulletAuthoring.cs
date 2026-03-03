@@ -25,9 +25,3 @@ public class BulletAuthoring : MonoBehaviour
     }
 }
 
-public struct BulletTag : IComponentData { }
-
-public struct LifeTime : IComponentData
-{
-    public float Value;
-}
