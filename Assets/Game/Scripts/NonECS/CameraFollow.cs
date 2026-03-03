@@ -9,20 +9,20 @@ public class CameraFollow : MonoBehaviour
 {
     private EntityManager _entityManager;
     private EntityQuery _playerQuery;
-
+    private Vector3 _currentVelocity;
+    private Vector3 _smoothedVelocity;
+    
+    [SerializeField] private float3 BaseOffset = new float3(0, 20, -15); // Базовый наклон
+    [SerializeField] private float LookAheadFactor = 0.5f; // Насколько сильно камера "убегает" вперед
+    [SerializeField] private float SmoothTime = 0.15f;
+    
     private void Start()
     {
         _entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
         // Используем LocalToWorld — это финальная мировая позиция после всех расчетов
         _playerQuery = _entityManager.CreateEntityQuery(typeof(VehicleComponent), typeof(LocalToWorld));
     }
-
-    public float3 BaseOffset = new float3(0, 20, -15); // Базовый наклон
-    public float LookAheadFactor = 0.5f; // Насколько сильно камера "убегает" вперед
-    public float SmoothTime = 0.15f;
-
-    private Vector3 _currentVelocity;
-    private Vector3 _smoothedVelocity;
+    
     private void LateUpdate()
     {
         if (_playerQuery.IsEmpty) return;
@@ -45,8 +45,5 @@ public class CameraFollow : MonoBehaviour
         targetPos.y = BaseOffset.y;
         // 3. Плавное движение
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref _currentVelocity, SmoothTime);
-
-        // 4. Оставляем угол камеры статичным (настрой его один раз в инспекторе, например Rotation X: 60)
-        // Чтобы камера не дергалась, LookAt лучше не использовать или нацелить его тоже с опережением
     }
 }

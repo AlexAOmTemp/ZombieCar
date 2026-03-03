@@ -12,7 +12,7 @@ public partial struct BumperDamageSystem : ISystem
     private ComponentLookup<RammingData> _rammingLookup;
     private ComponentLookup<PhysicsVelocity> _velocityLookup;
     private ComponentLookup<DeadTag> _deadLookup;
-    public ComponentLookup<RamCooldown> _cooldownLookup;
+    private ComponentLookup<RamCooldown> _cooldownLookup;
 
     private BufferLookup<DamageBufferElement> _damageBufferLookup;
     private BufferLookup<ResistanceBufferElement> _resistanceBufferLookup;
@@ -55,7 +55,6 @@ public partial struct BumperDamageSystem : ISystem
             VelocityLookup = _velocityLookup,
             DeadLookup = _deadLookup,
             DamageBufferLookup = _damageBufferLookup,
-            ResistanceBufferLookup = _resistanceBufferLookup,
             CooldownLookup = _cooldownLookup,
         }.Schedule(SystemAPI.GetSingleton<SimulationSingleton>(), state.Dependency);
     }
@@ -73,7 +72,6 @@ struct BumperCollisionJob : ICollisionEventsJob
     [ReadOnly] public ComponentLookup<RamCooldown> CooldownLookup;
 
     [ReadOnly] public BufferLookup<DamageBufferElement> DamageBufferLookup;
-    [ReadOnly] public BufferLookup<ResistanceBufferElement> ResistanceBufferLookup;
 
     public ComponentLookup<PhysicsVelocity> VelocityLookup;
 

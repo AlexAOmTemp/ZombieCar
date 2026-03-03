@@ -44,13 +44,6 @@ public struct RamCooldown : IComponentData
     public float TimeLeft;
 }
 
-[InternalBufferCapacity(2)]
-public struct BumperInfoElement : IBufferElementData
-{
-    public ColliderKey Key;
-    public float BumperEfficiency;
-}
-
 //Для торможения при таране зомби
 [InternalBufferCapacity(8)]
 public struct ResistanceBufferElement : IBufferElementData
