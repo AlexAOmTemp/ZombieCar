@@ -6,7 +6,7 @@ namespace Game.Crystalls
 {
     public class ResourceSpawnerAuthoring : MonoBehaviour
     {
-        public GameObject CrystalPrefab;
+        [SerializeField] private GameObject CrystalPrefab;
 
         public class Baker : Baker<ResourceSpawnerAuthoring>
         {
