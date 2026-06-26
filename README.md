@@ -1,29 +1,32 @@
-Небольшой проект, переосмысление Vampire Survivols. Разрабатывается в парадигме ECS, код почти полностью сгенерирован AI. 
-Суть задумки: 
+ **English** | [🇷🇺 Русский](Readme_ru.md)
 
-Core Gamplay: боевой грузовик ездит по городу с зомби, давит их бампером или отстреливает турелями. Попутно грузовик собирает ресурсы и модифицируется: прокачиваются турели, двигатель, прочность корпуса, сила тарана. Сила зомби постепенно нарастает, появляются новые виды.
+# Description
 
-Meta Gamplay: Между сессиями сохранются очки технолгий, которые позволяют улучшать стартовые условия боя, открывать новые виды турелей, возможно новые грузовики с большим количеством слотов под турели или полетом.
+A reimagining of *Vampire Survivors*. The project is developed using the ECS paradigm, with the code being almost entirely AI-generated.
 
-Что реализовано:
+# Core Concept:
 
-1) Базовое движение машины
-2) Базовое движение и спавн зомби разных видов
-3) Стрельба турелей
-4) Урон и хп
-5) Предварительная механика сбора ресурсов (упрощенная)
+- **Core Gameplay:** Drive a combat truck through a zombie-infested city, crushing them with the bumper or gunning them down with turrets. Along the way, collect resources and upgrade the vehicle, improving turrets, engine, hull durability, and ramming power. Zombie strength escalates over time, and new enemy types emerge.
+- **Meta Gameplay:** Earn tech points between sessions to improve starting conditions, unlock new turret types, and potentially unlock new trucks with more turret slots or flight capabilities.
 
-Что в планах:
+# Current Features:
 
-1) Разные виды турелей: пулемет, снайперская, ракетница, дробовик, зенитка против воздушных зомби, огнемет (опционально)
-2) Уровни турелей, с первого по четвертый, прокачиваются за материалы
-3) Калибровка турелей - при убийстве турель получает опыт и пассивно улучшается. Максимально откалиброванная турель первого уровня будет чуть сильнее стоковой второго, это даст игроку выбор: тратить ли ресурсы на прокачку уровня турели, или пустить на другие нужды.  
-4) Разные виды зомби: большие/маленькие, рой/единичные, наземные/летающие, стрелки/ближний бой - в разных комбинациях.
-5) Сбор ресурсов через выпускаемые дроны, с возможностью их модификации
-6) Виды ресурсов: металл - для апгрейдов, топливо - для движения и работы систем, очки науки - для мета прокачки.
-7) Разные сложности игры от бронзы до платины - чем сильнее враги тем выше награда, но в случае поражения большая часть мета награды пропадает, так что игрок должен сам адекватно подбирать сложность под свой уровень прокачки.
+1. Basic vehicle movement.
+2. Basic movement and spawning for various zombie types.
+3. Turret shooting mechanics.
+4. Health and damage systems.
+5. Preliminary resource collection mechanics (simplified).
 
-Скриншот очень ранней версии:
+# Upcoming Features:
 
-<img width="448" height="254" alt="image" src="https://github.com/user-attachments/assets/fa1ec174-ba22-4eec-8e1e-54c203fe6484" />
+1. **Diverse Turret Types:** Machine gun, sniper rifle, rocket launcher, shotgun, anti-air turret (against flying zombies), and an optional flamethrower.
+2. **Turret Tiers:** Upgrade turrets from tier 1 to tier 4 using collected materials.
+3. **Turret Calibration:** Turrets gain experience from kills and passively improve. A fully calibrated tier-1 turret will be slightly stronger than a stock tier-2 turret. This gives players a strategic choice: spend resources on tier upgrades or save them for other needs.
+4. **Varied Zombie Types:** Combinations of large/small, swarm/single, ground/flying, and ranged/melee enemies.
+5. **Drone-Assisted Salvage:** Collect resources using deployable and upgradable drones.
+6. **Resource System:** Metal for upgrades, fuel for movement/systems, and tech points for meta-progression.
+7. **Difficulty Tiers:** Difficulty scales from Bronze to Platinum. Higher difficulty yields greater rewards, but failing a run causes you to lose most of your meta-rewards. Players must balance the risk and reward based on their current upgrades.
 
+# Screenshot:
+
+![](ScreenShots/Gameplay.png)
