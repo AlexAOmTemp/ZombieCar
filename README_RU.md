@@ -30,4 +30,4 @@ Meta Gamplay: Между сессиями сохранются очки техн
 
 # Скриншот:
 
-![](ScreenShots/Gameplay.png)
+![](Screenshots/Gameplay.png)
