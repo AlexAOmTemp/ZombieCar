@@ -29,4 +29,4 @@ A reimagining of *Vampire Survivors*. The project is developed using the ECS par
 
 # Screenshot:
 
-![](ScreenShots/Gameplay.png)
+![](Screenshots/Gameplay.png)
