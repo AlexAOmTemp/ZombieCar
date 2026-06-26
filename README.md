@@ -1,4 +1,4 @@
- **English** | [🇷🇺 Русский](Readme_ru.md)
+ **English** | [🇷🇺 Русский](README_RU.md)
 
 # Description
 
